@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: gold;
+			font-size: 30px;
+			font-weight: 600;
+
+		}
+		button{
+			font-size: 20px;
+			background-color: orange;
+		}
+		form{
+			border: 2px solid black;
+			width: 500px;
+			background-color: Darkorange;
+
+		}
+	</style>
+</head>
+<body><center>
+		<br><br>
+		<form method="post" action="/loginpage/">
+		<h3> Sign up Form </h3>
+			{% csrf_token %}
+
+			{{signup_form.as_p}}
+			<button>Submit</button>
+			
+		</form>
+
+		<!-- {% for p in productmodel %}
+			<h4>{{p.pname}}</h4>
+			<p>{{p.pprice}}</p>
+		{% endfor %} -->
+	</center>
+</body>
+</html>
